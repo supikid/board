@@ -1,0 +1,26 @@
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 960px;
+}
+
+header {
+	border-bottom:1px solid #eee;
+}
+
+header .htopic .htopic-left {
+	display: inline-block;
+}
+
+header .htopic .htopic-right {
+	display: inline-block;
+	float: right;
+}
+
+header .htopic .htopic-right ul {
+	list-style: none;
+}
+
+header .htopic .htopic-right ul li {
+	display: inline-block;
+}
