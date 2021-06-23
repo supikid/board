@@ -16,6 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/webjars/**") // セキュリティ対象外
 				.antMatchers("/css/**") // セキュリティ対象外
 				.antMatchers("/js/**") // セキュリティ対象外
+				.antMatchers("/image/**") // セキュリティ対象外
 				.antMatchers("/h2-console/**"); // セキュリティ対象外
 	}
 

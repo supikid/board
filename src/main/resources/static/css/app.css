@@ -5,7 +5,12 @@
 }
 
 header {
-	border-bottom:1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+header .htopic {
+	font-size: small;
+	padding: 0.4rem 0.6rem;
 }
 
 header .htopic .htopic-left {
@@ -23,4 +28,119 @@ header .htopic .htopic-right ul {
 
 header .htopic .htopic-right ul li {
 	display: inline-block;
+}
+
+header .htopic .htopic-right .htopic-links li {
+	margin-right: 1.4rem;
+}
+
+header .hmain {
+	display: block;
+}
+
+header .hmain .hlogo {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	float: left;
+	display: block;
+}
+
+header .hmain .huserinfo {
+	float: left;
+	display: block;
+	min-height: 38px;
+	margin: 11px 0 0;
+}
+
+header .hmain:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header .hmain .huserinfo .huserinfo-icon {
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: middle;
+}
+
+header .hmain .huserinfo .huserinfo-icon a img {
+	display: inline;
+	border-radius: 50%;
+}
+
+header .hmain .huserinfo .huserinfo-user {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: small;
+	margin-right: 1.2rem;
+}
+
+header .hmain .huserinfo .huserinfo-user p {
+	margin: 0;
+	padding: 0;
+}
+
+header .hmain .huserinfo .huserinfo-point {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: small;
+}
+
+header .hmain .huserinfo .huserinfo-point p {
+	margin: 0;
+	padding: 0;
+}
+
+#search-box {
+	display: flex;
+	padding-top: .6rem;
+	padding-bottom: .6rem;
+}
+
+#search-box .text-box {
+	border: 2px solid #ddd;
+	border-right: none;
+	border-radius: 4px 0 0 4px;
+	height: 42px;
+	width: 480px;
+}
+
+#search-box .text-box input {
+	padding: 7px 32px 7px 16px;
+	border: none;
+	line-height: 24px;
+	color: #333;
+	font-size: 16px;
+	width: 100%;
+}
+
+#search-box button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	background-color: #1a75ff;
+	border-radius: 0 4px 4px 0;
+	border: none;
+	cursor: pointer;
+}
+
+footer {
+	margin-top: 24px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.4;
+}
+
+footer .container {
+	border-top: 1px solid #ebebeb;
+	padding: 24px 12px;
+}
+
+footer address a {
+	display: inline-block;
+    margin-bottom: 4px;
+    color: #777;
 }
