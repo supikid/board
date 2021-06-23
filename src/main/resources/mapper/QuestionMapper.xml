@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.supi.board.repository.QuestionMapper">
+
+	<resultMap type="com.supi.board.model.Question" id="question">
+		<id column="id" property="id"></id>
+		<result column="code" property="code"></result>
+		<result column="content" property="content"></result>
+		<result column="user_id" property="userId"></result>
+		<result column="posted_at" property="postedAt"></result>
+		<result column="created_at" property="createdAt"></result>
+		<result column="updated_at" property="updatedAt"></result>
+		<association property="user" resultMap="user" columnPrefix="users_"></association>
+	</resultMap>
+
+	<resultMap type="com.supi.board.model.User" id="user">
+		<id column="id" property="id"></id>
+		<result column="name" property="name"></result>
+		<result column="created_at" property="createdAt"></result>
+		<result column="updated_at" property="updatedAt"></result>
+	</resultMap>
+
+	<select id="findAll" resultType="question">
+		select
+			q.id,
+			q.code,
+			q.content,
+			q.user_id,
+			q.posted_at,
+			q.created_at,
+			q.updated_at,
+			u.id as users_id,
+			u.name as users_name,
+			u.created_at as users_created_at,
+			u.updated_at as users_updated_at,
+		FROM
+			questions as q
+		LEFT JOIN users as u on u.id = q.user_id
+		LIMIT #{limit} OFFSET #{offset}
+	</select>
+
+
+</mapper>

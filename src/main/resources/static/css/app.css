@@ -141,6 +141,40 @@ footer .container {
 
 footer address a {
 	display: inline-block;
-    margin-bottom: 4px;
-    color: #777;
+	margin-bottom: 4px;
+	color: #777;
+}
+
+/** TOP **/
+#top-question-list .question {
+	border: 1px solid #eee;
+	margin-bottom: 1rem;
+	padding: 0.85rem;
+}
+
+#top-question-list .question .content {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#top-question-list .question ul {
+	list-style: none;
+	padding-left: 0;
+	text-decoration:none;
+	color: #999;
+	margin-bottom:0;
+}
+
+#top-question-list .question ul li {
+	display: inline-block;
+}
+
+#top-question-list .question .comment-count {
+	
+}
+
+#top-question-list .question .posted-timestamp {
+	margin-left: 1rem;
 }

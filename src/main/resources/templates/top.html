@@ -11,6 +11,17 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<h2>最新の質問</h2>
+					<div id="top-question-list">
+						<div th:each="item: ${questions}" class="question">
+							<a th:href="@{'/qs/' + ${item.code}}">
+								<div th:text="${item.content}" class="content"></div>
+								<ul>
+									<li class="comment-count"><i class="far fa-comments"></i>&nbsp;0</li>
+									<li class="posted-timestamp" th:text="${#dates.format(item.postedAt, 'YYYY/MM/dd HH:mm')}"></li>
+								</ul>
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-4">
 					<h3>総合Q&Aランキング</h3>
